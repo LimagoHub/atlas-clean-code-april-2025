@@ -47,6 +47,14 @@ public class Fenster extends Frame  {
     private class MyWindowListener extends WindowAdapter {
         @Override
         public void windowClosing(final WindowEvent e) {
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException ex) {
+                System.out.println(ex.getMessage());
+                Thread.currentThread().interrupt();
+            }
+
             beenden();
         }
     }
