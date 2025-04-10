@@ -15,4 +15,5 @@ add_executable(VectorUebung main.cpp
         atlas/generator/impl/random/ClassicRandomGenerator.h
         atlas/container/impl/sequential/VectorFactorySequentialImpl.h
         atlas/container/impl/decorator/VectorFactoryBenchmarkDekorator.h
-        atlas/container/AbstractVectorFactory.h)
+        atlas/container/AbstractVectorFactory.h
+        atlas/container/impl/parallel/VectorFactoryParallelImpl.h)

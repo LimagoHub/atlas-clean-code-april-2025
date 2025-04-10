@@ -25,7 +25,7 @@ int main() {
     auto start_ = std::chrono::high_resolution_clock ::now();
 
     std::for_each( std::execution::par_unseq, feld->begin(), feld->end(),[](int &value){
-        thread_local auto generator = atlas::generator::MersenneTwisterNumberGenerator{};
+        static thread_local auto generator = atlas::generator::MersenneTwisterNumberGenerator{};
         value = generator.next();
 
     });
