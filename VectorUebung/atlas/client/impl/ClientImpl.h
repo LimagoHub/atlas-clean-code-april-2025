@@ -17,7 +17,7 @@ namespace atlas::client {
         explicit ClientImpl(VECTOR factory) : factory_(std::move(factory)) {}
 
         auto doSomethingWithLargeVector() -> void override {
-            auto vector = factory_->createAndFillVector(100);
+            auto vector = factory_->createAndFillVector(INT32_MAX/2);
             for (int i = 0; i < 3; ++i) {
                 std::cout << vector->at(i) << "\n";
             }
